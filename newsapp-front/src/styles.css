@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+  background-image: url("https://www.infinityfamilycare.com/wp-content/uploads/2015/11/white-parchment-paper-texture-1-1024x575.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

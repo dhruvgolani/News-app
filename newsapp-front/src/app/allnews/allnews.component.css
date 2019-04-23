@@ -1,0 +1,60 @@
+#spinner{
+  position: fixed;
+  top: 30%;
+  left: 45%;
+}
+h2{
+  font-size: 45px;
+  font-family:fantasy;
+  text-transform: uppercase;
+  text-align: center;
+}
+a{
+  color: black;
+}
+.marticle{
+  border: 2px solid black;
+  border-radius: 20px;
+  margin:2px;
+  padding: 10px;
+  transition: transform .2s;
+	/* -webkit-transition: width 2s; /* Safari */
+  /* transition: width 2s; */
+}
+.marticle:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+img{
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+h4{
+  font-weight: bold;
+  font-size: 25px;
+}
+h4:hover{
+  text-decoration: underline;
+}
+p{
+  font-family: cursive;
+  font-size: 20px;
+}
+.row{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+hr {
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+}
+hr:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+}

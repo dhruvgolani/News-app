@@ -1,0 +1,109 @@
+<div class="container">
+  <ul class="list-inline">
+    <li><a href="news/1">Trending</a></li>
+    <li><a href="news/2">Entertainment</a></li>
+    <li><a href="news/3">Sports</a></li>
+    <li><a href="news/4">Technology</a></li>
+    <li><a href="news/5">Business</a></li>
+    <li><a href="news/6">Health</a></li>
+    <li><a href="news/2">Science</a></li>
+  </ul>
+  <div id="spinner" *ngIf="!(topArticles?.length>0)">
+    <img src="assets/Ripple-2s-200px.gif" alt="">
+  </div>
+  <a href="news/1"><h2>Top Headlines</h2></a>
+  <div class="row">
+    <div class="col-md-6" class="articleBox">
+      <div class="slideArticle" *ngFor="let article of topArticles;let i=index" [ngStyle]="{'display':current==i?'block':'none'}">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+      </div>
+      <!-- <div class="marticle">
+        <img src={{topArticles[0].urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{topArticles[0].title}}</h4>
+        <p>{{topArticles[0].description}}</p>
+      </div> -->
+    </div>
+    <div class="col-md-6">
+      <marquee  direction="up" loop height="350" scrollamount="4">
+        <ul>
+          <li *ngFor="let article of topArticles"><a href={{article.url}}>{{article.title}}</a></li>
+        </ul>
+      </marquee>
+    </div>
+  </div>
+  <hr>
+  <a href="news/2"><h2>Entertainment</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of entArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+  <hr>
+  <a href="news/3"><h2>Sports</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of sportsArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+  <hr>
+  <a href="news/4"><h2>Technology</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of techArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+  <hr>
+  <a href="news/5"><h2>Business</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of businessArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+  <hr>
+  <a href="news/6"><h2>Health & Fitness</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of healthArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+  <hr>
+  <a href="news/7"><h2>Science</h2></a>
+  <div class="row">
+    <div class="cell col-md-4" *ngFor="let article of scienceArticles;let i=index">
+      <div class="marticle" *ngIf="i<6">
+        <img src={{article.urlToImage}} alt="" style="width:95%;height:200px;">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description}}</p>
+        <a href={{article.url}} class="pull pull-right"><button type="button" class="btn btn-primary" name="button">Read More</button></a>
+      </div>
+    </div>
+    </div>
+    <hr>
+  </div>
